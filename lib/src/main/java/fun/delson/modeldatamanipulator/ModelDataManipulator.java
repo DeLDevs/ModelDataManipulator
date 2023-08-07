@@ -1,8 +1,8 @@
-package fun.DeLson.ModelDataManipulator;
+package fun.delson.modeldatamanipulator;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import fun.DeLson.ModelDataManipulator.Commands.Model;
+import fun.delson.modeldatamanipulator.commands.Model;
 
 public class ModelDataManipulator extends JavaPlugin {
 	
@@ -10,6 +10,7 @@ public class ModelDataManipulator extends JavaPlugin {
 	public void onEnable() {
 		
 		getCommand("model").setExecutor(new Model());
+		getCommand("model").setTabCompleter(new Model());
 		
 	}
 
